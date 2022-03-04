@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  background: #141414;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 1600px;
+  max-width: 100%;
+  padding: 0 4rem;
+  box-sizing: border-box;
+}
+
+.mangaflix-slider {
+  padding: 2rem 4rem;
+  overflow: hidden;
+  margin: 0 -4rem;
+}
+.mangaflix-slider__prev, .mangaflix-slider__next {
+  color: #fff;
+  height: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0 1rem;
+  transition: 250ms ease all;
+}
+.mangaflix-slider__prev.swiper-button-disabled, .mangaflix-slider__next.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.mangaflix-slider__prev {
+  left: -4rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), transparent);
+}
+.mangaflix-slider__next {
+  right: -4rem;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.8));
+}
+.mangaflix-slider__title {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.mangaflix-slider__slider {
+  max-width: 100%;
+  overflow: visible !important;
+}
+.mangaflix-slider__card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  aspect-ratio: 2/3;
+  transition: 250ms ease all;
+  color: #fff;
+}
+.mangaflix-slider__card:hover {
+  z-index: 2;
+  transform: scale(1.2);
+  box-shadow: 0 0 2rem -0.5rem #000;
+}
+.mangaflix-slider__card-tag {
+  position: absolute;
+  top: 100%;
+  margin-top: -2rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  background: #c80b14;
+  padding: 0.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0.2rem;
+  line-height: 1;
+  font-size: 0.8rem;
+  transition: 250ms ease all;
+}
+*:hover > .mangaflix-slider__card-tag {
+  top: 8rem;
+}
+.mangaflix-slider__card-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 250ms ease all;
+}
+*:hover > .mangaflix-slider__card-img {
+  height: 8rem;
+}
+.mangaflix-slider__card-infos {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  top: 8rem;
+  background: #141414;
+  opacity: 0;
+  transition: 250ms ease all;
+  display: flex;
+  flex-direction: column;
+}
+*:hover > .mangaflix-slider__card-infos {
+  opacity: 1;
+}
+.mangaflix-slider__card-tags {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.6rem;
+  margin-top: auto;
+}
